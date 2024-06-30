@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Alert = ({text, type}) => {
+const Alert = ({ text, type }) => {
   return (
     <div className='absolute top-10 left-0 right-0 flex justify-center items-center'>
       <div className={`${type === "danger" ? "bg-red-800" : "bg-green-600"} p-2 text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex items-center`} role='alert'>
