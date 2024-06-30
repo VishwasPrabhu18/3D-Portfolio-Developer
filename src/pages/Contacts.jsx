@@ -54,7 +54,6 @@ const Contact = () => {
       console.log(error);
       setCurrentAnimation("idle");
       showAlert({ show: true, text: "I didn't receive your message", type: "danger" });
-      // TODO: Show error message
     });
   };
 
@@ -65,7 +64,7 @@ const Contact = () => {
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
-        <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handlesubmit}>
+        <form className="w-full flex flex-col gap-7 mt-14" onSubmit={handlesubmit} ref={formRef}>
           <label className="text-black-500 font-semibold">Name
             <input type="text" name="name" className="input" placeholder="John" required value={form.name}
               onChange={handleChange} onFocus={handleFocus} onBlur={handleBlur}
